@@ -5,7 +5,7 @@ Feature: Registration functionality
     When User enters the details into below fileds
       | firstName | Mahesh         |
       | lastName  | Patil          |
-      | email     | demo_3@gmail.com |
+      | email     | demo_13@gmail.com |
       | telephone |1234567891|
       | Password  | 1234           |
     And User selects Privacy Policy
@@ -17,7 +17,7 @@ Feature: Registration functionality
     When User enters the details into below fileds
       | firstName | Mahesh          |
       | lastName  | Patil           |
-      | email     | demo_4@gmail.com |
+      | email     | demo_14@gmail.com |
       | telephone |1234567892|
       | Password  |12345|
     And User Selects Yes for NewsLetter
@@ -31,7 +31,7 @@ Feature: Registration functionality
       | firstName | Mahesh          |
       | lastName  | Patil           |
       | email     | demo@gmail.com |
-      | telephone |1234567893|
+      | telephone |1234564893|
       | Password  |12345|
     And User Selects Yes for NewsLetter
     And User selects Privacy Policy

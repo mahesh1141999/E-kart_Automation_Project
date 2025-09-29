@@ -1,5 +1,6 @@
 package StepsDefination;
 
+import Pages.HomePage;
 import driverFactory.DriverFactory;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -11,21 +12,23 @@ import org.openqa.selenium.WebDriver;
 
 public class Search {
     WebDriver driver;
+    HomePage homePage;
     @Given("User opens the Application")
     public void user_opens_the_application() {
 
-        driver= DriverFactory.getDriver();
+        driver = DriverFactory.getDriver();
+         homePage = new HomePage(driver);
 
     }
 
     @When("User enters valid product {string} into Search box filed")
     public void user_enters_valid_product_into_search_box_filed(String validProduct) {
-        driver.findElement(By.xpath("//div [@id='search']/input [@name='search']")).sendKeys(validProduct);
+      homePage.EnterTextInSearchBox(validProduct);
     }
 
     @And("User clicks on Search button")
     public void user_clicks_on_search_button() {
-        driver.findElement(By.xpath("//button[@class='btn btn-default btn-lg']")).click();
+        homePage.clickOnSearchButton();
     }
 
     @Then("User should get valid product displays in search results")
@@ -35,7 +38,7 @@ public class Search {
 
     @When("User enters invalid product {string} into Search box filed")
     public void user_enters_invalid_product_into_search_box_filed(String invalidProduct) {
-        driver.findElement(By.xpath("//div [@id='search']/input [@name='search']")).sendKeys(invalidProduct);
+        homePage.EnterTextInSearchBox(invalidProduct);
     }
 
 
@@ -46,7 +49,7 @@ public class Search {
 
     @Then("User should get message about no product matching")
     public void user_should_get_message_about_no_product_matching() {
-        Assert.assertEquals("There is no product that matches the search criteria.", driver.findElement(By.xpath("//*[contains (text(), 'There is no product')]")).getText());
+        Assert.assertEquals("There is no product that matches the search criteria.", homePage.matchNotFoundWarning());
 
     }
 }
