@@ -1,13 +1,11 @@
-📖 Project Overview
-
-This project automates the functional testing of the eKart (TutorialsNinja Demo) website: https://tutorialsninja.com/demo/.
+📖 Project Overview <br>
+This project automates the functional testing of the eKart (TutorialsNinja Demo) website: https://tutorialsninja.com/demo/. <br>
 The automation suite validates key e-commerce features such as product search, add-to-cart, checkout, and user account operations, ensuring the website’s core functionalities work as expected.
 
-🎯 Objectives
-
-Automate the end-to-end user workflow on the eKart demo site.
-Validate UI components, navigation, and form interactions.
-Ensure data-driven and modular automation framework.
+🎯 Objectives <br>
+Automate the end-to-end user workflow on the eKart demo site. <br>
+Validate UI components, navigation, and form interactions.<br>
+Ensure data-driven and modular automation framework. <br>
 Provide reusable test scripts for regression and smoke testing.
 
 ⚙️ Tech Stack <br>
