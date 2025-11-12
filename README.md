@@ -10,10 +10,9 @@ Validate UI components, navigation, and form interactions.
 Ensure data-driven and modular automation framework.
 Provide reusable test scripts for regression and smoke testing.
 
-⚙️ Tech Stack
-
-Language:  Java and JavaScript
-Framework: Selenium / TestNG / Cucumber.
-Build Tool: Maven 
-Reporting: Extent Reports
+⚙️ Tech Stack <br>
+Language:  Java and JavaScript <br>
+Framework: Selenium / TestNG / Cucumber. <br>
+Build Tool: Maven <br> 
+Reporting: Extent Reports <br>
 Version Control: Git & GitHub
