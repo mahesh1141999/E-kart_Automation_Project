@@ -8,7 +8,7 @@ Feature: Search functionality
 
   Scenario: User searches for a Invalid product
     Given User opens the Application
-    When User enters invalid product "Honda" into Search box filed
+    When User enters invalid product "Honda Car" into Search box filed
     And User clicks on Search button
     Then User should get message about no product matching
 
