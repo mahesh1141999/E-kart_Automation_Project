@@ -15,12 +15,8 @@ public class Search {
     HomePage homePage;
     @Given("User opens the Application")
     public void user_opens_the_application() {
-
-
-
-
-        
          homePage = new HomePage(driver);
+
 
     }
 
@@ -52,7 +48,9 @@ public class Search {
 
     @Then("User should get message about no product matching")
     public void user_should_get_message_about_no_product_matching() {
-        Assert.assertEquals("There is no product that matches the search criteria.", homePage.matchNotFoundWarning());
+        Assert.assertEquals(
+                "There is no product that matches the search criteria.", homePage.matchNotFoundWarning());
+        System.out.println("tesr");
 
     }
 }
