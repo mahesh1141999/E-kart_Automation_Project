@@ -76,5 +76,11 @@ public class RegisterPage {
         SelectYesOption.click();
     }
 
+        public String randomEmailGenrator(){
+            String email = "test" + (int)(Math.random() * 10000) + "@gmail.com";
+            return email;
+
+    }
+
 
 }

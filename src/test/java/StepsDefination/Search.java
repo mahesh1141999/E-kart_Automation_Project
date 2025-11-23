@@ -15,6 +15,7 @@ public class Search {
     HomePage homePage;
     @Given("User opens the Application")
     public void user_opens_the_application() {
+        driver = DriverFactory.getDriver();
          homePage = new HomePage(driver);
 
 

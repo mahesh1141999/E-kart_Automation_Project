@@ -18,11 +18,12 @@ import java.util.Map;
 public class Register {
     WebDriver driver;
     RegisterPage registerPage;
+    HomePage homePage;
 
     @Given("User navigates to Register Accounts Page")
     public void user_navigates_to_register_accounts_page() {
         driver = DriverFactory.getDriver();
-        HomePage homePage = new HomePage(driver);
+         homePage = new HomePage(driver);
         homePage.clickOnMyAccount();
         homePage.clickOnRegisterOption();
         registerPage = new RegisterPage(driver);
@@ -34,7 +35,7 @@ public class Register {
 
         registerPage.enterFirstName(dataMap.get("firstName"));
         registerPage.enterLastName(dataMap.get("lastName"));
-        registerPage.enterEmail(dataMap.get("email"));
+        registerPage.enterEmail(registerPage.randomEmailGenrator());
         registerPage.enterTelephone(dataMap.get("telephone"));
 
         registerPage.enterPassword(dataMap.get("Password"));
