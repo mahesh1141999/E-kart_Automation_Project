@@ -86,4 +86,16 @@ public class Register {
         Assert.assertEquals("Password must be between 4 and 20 characters!", driver.findElement(By.xpath("//div [contains(text(), 'Password must be')]")).getText());
     }
 
+    @When("User enters the details into below fileds to verify duplicate email")
+    public void user_Enters_The_Details_Into_Below_Fileds_To_Verify_Duplicate_Email(DataTable dataTable) {
+        Map<String, String> dataMap = dataTable.asMap(String.class, String.class);
+
+        registerPage.enterFirstName(dataMap.get("firstName"));
+        registerPage.enterLastName(dataMap.get("lastName"));
+        registerPage.enterEmail(dataMap.get("email"));
+        registerPage.enterTelephone(dataMap.get("telephone"));
+
+        registerPage.enterPassword(dataMap.get("Password"));
+        registerPage.enterConfirmPassword(dataMap.get("Password"));
+    }
 }

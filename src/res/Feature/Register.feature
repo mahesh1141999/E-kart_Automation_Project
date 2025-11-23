@@ -27,7 +27,7 @@ Feature: Registration functionality
 
   Scenario: User creates a duplicates account
     Given User navigates to Register Accounts Page
-    When User enters the details into below fileds
+    When User enters the details into below fileds to verify duplicate email
       | firstName | Mahesh          |
       | lastName  | Patil           |
       | email     | demo@gmail.com |
