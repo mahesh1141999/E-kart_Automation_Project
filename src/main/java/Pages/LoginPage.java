@@ -29,6 +29,7 @@ public class LoginPage {
     public void enterEmailAddress(String emailText) {
 
         emailField.sendKeys(emailText);
+        System.out.println("test");
 
     }
 
